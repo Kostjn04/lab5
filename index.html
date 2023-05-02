@@ -4,29 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Методы</title>
+    <title>Строитель</title>
     <script type="text/javascript">
-      let human = {
-        firstName: "Alex",
-        secondName: "Jazun",
-        age: 27,
-        occupation: "<img src=''width='152'height='38'",
-        // Метод show() в блоке инициализации обьекта.
-        show: function () {
-          document.write("<p>First name: " + this.firstName)
-          document.write("<p>Second name: " + this.secondName)
-          document.write("<p>Age: " + this.age + " years old<br/>")
-          document.write(this.occupation + "<hr/>")
-        },
-        //Создаем метод changeWork() в блоке инициализации обьекта.
-        changeWork: function (occupation) {
-          this.occupation = occupation
-        },
+      let builder = new Object()
+      builder.createRoof = function () {
+        document.write("<img src='Images_LR7/Roof.gif'/><br/>")
       }
-      // Вызов методов
-      human.show()
-      human.changeWork("<img src=''")
-      human.show()
+      builder.createFirstFloor = function () {
+        document.write("<img src='Images_LR7/FirstFloor.gif'/><br/>")
+      }
+      builder.createSecondFloor = function () {
+        document.write("<img src='Images_LR7/SecondFloor.gif'/><br/>")
+      }
+      builder.createBasement = function () {
+        document.write("<img src='Images_LR7/Basement.gif'/><br/>")
+      }
+      // Строительство дома.
+      builder.createRoof()
+      builder.createSecondFloor()
+      builder.createFirstFloor()
+      builder.createBasement()
     </script>
   </head>
   <body></body>
