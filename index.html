@@ -4,31 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Вложенные обьекты</title>
+    <title>Создание вложенных обьектов через конструктор</title>
     <script type="text/javascript">
-      let human = {
-        firstName: "Alex",
-        secondName: "Jazun",
-        age: 27,
-        // Вложенный обьект.
-        occupation: {
-          company: "ZIEIT",
-          position: "Teacher",
-        },
-        occupation1: {
-          company: "Microsoft",
-          position: "Web Developer",
-        },
-      }
+      let human = new Object()
+
+      human.firstName = "Alex"
+      human.secondName = "Jazun"
+      human.age = 27
+
+      //Создание вложенного обьекта
+      human.occupation = new Object()
+
+      human.occupation.company = "Microsoft"
+      human.occupation.position = "Web Developer"
+
       document.write("<p>First name: " + human.firstName)
       document.write("<p>Second name: " + human.secondName)
       document.write("<p>Age: " + human.age + " years old")
+
       // Обращение к вложенному объекту.
       document.write("<p>Company: " + human.occupation.company)
       document.write("<p>Position: " + human.occupation.position)
-      //Обращение к обьекту occupation1
-      document.write("<p>Company: " + human.occupation1.company)
-      document.write("<p>Position: " + human.occupation1.position)
     </script>
   </head>
   <body></body>
