@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Конструктор Object()</title>
+    <title>Массивы в Javascript</title>
     <script type="text/javascript">
-      // Создаем обьект с именем point.
-      var point = new Object()
-      // Обращение к свойству x обьекта point.
-      // Если свойство отсутствует то оно создается автоматически и ему присваивается значение.
-      point.x = 10
-      // Создаем свойство y и присваиваем ему значение.
-      point.y = 15
-      // Добавляем к объекту метод.
-      point.f = function () {
-        document.write("<p>x = " + point.x + "<p>y = " + point.y)
+      let person = {
+        firstName: "Jim",
+        lastName: "Rainbow",
+        age: 30,
+        occupation: "Web developer",
+        skills: "JavaScript",
       }
-      point.f()
+
+      // Обращение к свойствам обьекта.
+      document.write("<p> " + person.firstName + " " + person.lastName)
+
+      // Изменение значения свойств обьекта
+      person.age = 25
+      document.write("<p>Age " + person.age + " " + "years old" + "<p> " + "Skills:" + person.skills)
     </script>
   </head>
   <body></body>
